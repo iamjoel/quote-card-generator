@@ -332,7 +332,7 @@ function App() {
 
             <div
               id="quote-card"
-              className={`w-full aspect-[4/3] rounded-xl p-6 ${themes[theme].bg} ${themes[theme].text} font-['HuiWenMingChao'] shadow-lg`}
+              className={`w-full rounded-xl p-6 ${themes[theme].bg} ${themes[theme].text} font-['HuiWenMingChao'] shadow-lg`}
             >
               {title && <div className="text-xl opacity-70 mb-4">{title}</div>}
               <div className="text-3xl leading-relaxed whitespace-pre-line">{content}</div>
