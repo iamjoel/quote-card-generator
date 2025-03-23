@@ -55,10 +55,15 @@ const themes: Record<Theme, CardTheme> = {
 };
 
 function App() {
-  const [title, setTitle] = useState('03/22');
-  const [content, setContent] = useState('愿意放弃自由来换取保障的人，他最终既得不到自由，也得不到保障。');
-  const [footer, setFooter] = useState('-哈耶克');
-  const [theme, setTheme] = useState<Theme>('blue');
+  const today = new Date();
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+  const [title, setTitle] = useState(`${month}/${day}`);
+  const [content, setContent] = useState(`有些人的确永远不会老，因为他们心里永远都充满了对人类的热爱和希望。
+
+一个人心里只要还有爱与希望，他就永远都是年轻的。`);
+  const [footer, setFooter] = useState('-古龙');
+  const [theme, setTheme] = useState<Theme>('orange');
   const [isExportingImage, setIsExportingImage] = useState(false);
   const [isExportingHtml, setIsExportingHtml] = useState(false);
   const [toast, setToast] = useState<Toast>({ message: '', visible: false });
